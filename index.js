@@ -1,23 +1,3 @@
-// WHEN I choose to view all departments
-    // I am presented with a formatted table showing:
-        // department names
-        // department ids
-// WHEN I choose to view all roles
-    // I am presented with:
-        // the job title, 
-        // role id, 
-        // the department that role belongs to
-        // the salary for that role
-// WHEN I choose to view all employees
-    // I am presented with a formatted table showing:
-        // employee data,
-        // including employee ids,
-        // first names,
-        // last names,
-        // job titles,
-        // departments,
-        // salaries,
-        // managers that the employees report to
 // WHEN I choose to add a department
     // I am prompted to enter the name of the department and that department is added to the database
 // WHEN I choose to add a role
@@ -28,8 +8,7 @@
     // I am prompted to select an employee to update and their new role and this information is updated in the database 
 
 const inquirer = require('inquirer');
-// const db = require('./config/connection');
-const userSelect = require('./db/choices')
+const userSelect = require('./db');
 
 // array for inquirer questions
 const promptOptions = [
@@ -49,11 +28,11 @@ const promptOptions = [
     }
 ]
 
+// main prompts
 inquirer 
 .prompt(
     promptOptions
 )
 .then((data) => {
-    // import stuff from choices
     userSelect(data)
 })
