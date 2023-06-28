@@ -72,8 +72,9 @@ function userChoice(data){
         )
         .then (
             // add a role fxn
-            console.log("add a role")
-        )
+            
+        );
+        console.log("add a role")
 
     } else if (data.selectchoice === 'Add an employee'){
         inquirer
@@ -81,10 +82,12 @@ function userChoice(data){
             addEmployee
         )
         .then(
-            console.log("add an employee")
-            // add an employee fxn
-        )
-
+            (data) =>
+            {
+                console.log(data)
+            }
+        );
+        
     } else if (data.selectchoice === 'Update employee role'){
         console.log("update employee role");
     };
