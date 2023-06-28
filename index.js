@@ -1,12 +1,3 @@
-// WHEN I start the application:
-    // I am presented with the following options: 
-            // view all departments, 
-            // view all roles, 
-            // view all employees, 
-            // add a department, 
-            // add a role, 
-            // add an employee,
-            // update an employee role
 // WHEN I choose to view all departments
     // I am presented with a formatted table showing:
         // department names
@@ -38,7 +29,30 @@
 
 const inquirer = require('inquirer');
 const db = require('./config/connection');
-const express = require('express');
+const userSelect = require('./db/choices')
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+// array for inquirer questions
+const promptOptions = [
+    {
+        type: 'List',
+        message: 'Select action',
+        choices: [
+            'View all departments',
+            'View all roles',
+            'View all employees',
+            'Add a department',
+            'Add a role',
+            'Add an employee',
+            'Update employee role'
+        ],
+        name: 'selectchoice'
+    }
+]
+
+inquirer 
+.prompt(
+    promptOptions
+)
+.then((data) => {
+    // import stuff from choices
+})
