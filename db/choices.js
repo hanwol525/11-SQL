@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+// const connection = require('../config/connection');
 const addDepartment = [
     {
         type: 'input',
@@ -47,41 +48,45 @@ const addEmployee = [
 ];
 
 function userChoice(data){
-    if (data.choices === 'View all departments'){
+    if (data.selectchoice === 'View all departments'){
+        console.log("view all departments");
+    } else if (data.selectchoice === 'View all roles'){
+        console.log("view all roles");
 
-    } else if (data.choices === 'View all roles'){
-
-    } else if (data.choices === 'View all employees'){
-
-    } else if (data.choices === 'Add a department'){
+    } else if (data.selectchoice === 'View all employees'){
+        console.log("view all employees");
+    } else if (data.selectchoice === 'Add a department'){
         inquirer
         .prompt(
             addDepartment
         )
         .then(
             // add dept to database fxn
+            console.log("add a department")
         )
 
-    } else if (data.choices === 'Add a role'){
+    } else if (data.selectchoice === 'Add a role'){
         inquirer
         .prompt(
             addRole
         )
         .then (
             // add a role fxn
+            console.log("add a role")
         )
 
-    } else if (data.choices === 'Add an employee'){
+    } else if (data.selectchoice === 'Add an employee'){
         inquirer
         .prompt(
             addEmployee
         )
         .then(
+            console.log("add an employee")
             // add an employee fxn
         )
 
-    } else if (data.choices === 'Update employee role'){
-
+    } else if (data.selectchoice === 'Update employee role'){
+        console.log("update employee role");
     };
 };
 

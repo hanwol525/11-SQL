@@ -28,13 +28,13 @@
     // I am prompted to select an employee to update and their new role and this information is updated in the database 
 
 const inquirer = require('inquirer');
-const db = require('./config/connection');
+// const db = require('./config/connection');
 const userSelect = require('./db/choices')
 
 // array for inquirer questions
 const promptOptions = [
     {
-        type: 'List',
+        type: 'list',
         message: 'Select action',
         choices: [
             'View all departments',
@@ -55,4 +55,5 @@ inquirer
 )
 .then((data) => {
     // import stuff from choices
+    userSelect(data)
 })
