@@ -45,7 +45,7 @@ const addEmployee = [
     },
     {
         type: 'input',
-        message: 'Manager ID number (numerical characters only; N/A if none): ',
+        message: 'Manager ID number (numerical characters only): ',
         name: 'manager'
     }
 ];
