@@ -13,7 +13,7 @@
   </ol>
 
 ## <span id="preview">Preview:</span>
-  <a href="#">Preview link</a>
+  <a href="https://watch.screencastify.com/v/tYtbvZly9s5bDCBKgCOQ">Preview link</a>
 
 ## <span id="license">License:</span>
   No license
