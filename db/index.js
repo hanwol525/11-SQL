@@ -69,7 +69,7 @@ function userChoice(data) {
             err ? console.error("error") : console.table(res);
         })
     } else if (data.selectchoice === 'View all roles'){
-        let sql = `SELECT role.id, role.title, role.salary, role.department_id FROM role LEFT JOIN ;`;
+        let sql = `SELECT role.id, role.title, role.salary, role.department_id FROM role;`;
         connection.query(sql, (err, res) => {
             err ? console.error("error") : console.table(res);
         });
