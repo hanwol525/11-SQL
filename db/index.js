@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const connection = require('./connection');
 const { error } = require('console');
+
+// prompts for adding/updating parts of the db
 const addDepartment = [
     {
         type: 'input',
